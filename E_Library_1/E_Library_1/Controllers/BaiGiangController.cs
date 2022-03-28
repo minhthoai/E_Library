@@ -37,8 +37,8 @@ namespace E_Library_1.Controllers
             if (dbBaiGiang == null)
                 return BadRequest("Bài giảng không Tồn Tại");
             dbBaiGiang.TenBaiGiang = baiGiang.TenBaiGiang;
-            dbBaiGiang.Loai=baiGiang.Loai;
-            dbBaiGiang.KichThuoc= baiGiang.KichThuoc;
+            dbBaiGiang.NoiDung=baiGiang.NoiDung;
+            dbBaiGiang.Loai= baiGiang.Loai;
             await _context.SaveChangesAsync();
             return Ok(await _context.BaiGiang.ToListAsync());
         }
