@@ -6,7 +6,7 @@ namespace E_Library_1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin, Teacher")]
     public class BaiGiangController : Controller
     {
         private readonly DataContext _context;

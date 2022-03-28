@@ -1,10 +1,12 @@
 ﻿using E_Library_1.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace E_Library_1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles = "ADMIN,Teacher")]
     public class DeThiController : Controller
     {
         private readonly DataContext _context;
